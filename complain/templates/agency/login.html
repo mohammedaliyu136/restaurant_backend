@@ -1,0 +1,67 @@
+{% extends './../base.html' %}
+
+{% block content %}
+
+	<!-- list body start -->
+<div class="container main">
+
+<h3>Login</h3>
+<div class="row">
+    <form action="/login/" method="post">
+    {% csrf_token %}
+      <div class="form-group">
+        <label for="email">Username:</label>
+        <input type="text" class="form-control" name="username">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" name="password">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success">Login</button>
+      </div>
+    </form>
+</div>
+
+
+<br><br><br><br><br><br><br><br>
+<h3>Register</h3>
+<div class="row">
+    <form action="/register/" method="post">
+    {% csrf_token %}
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" name="email">
+      </div>
+      <div class="form-group">
+        <label for="first_name">First Name:</label>
+        <input type="first_name" class="form-control" name="first_name">
+      </div>
+      <div class="form-group">
+        <label for="last_name">Last Name:</label>
+        <input type="last_name" class="form-control" name="last_name">
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="username" class="form-control" name="username">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" name="pwd">
+      </div>
+      <div class="form-group">
+        <label for="pwd_again">Password Again:</label>
+        <input type="password" class="form-control" name="pwd_again">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success">Register</button>
+      </div>
+    </form>
+</div>
+
+
+
+
+</div>
+<!-- list body end -->
+{% endblock %}

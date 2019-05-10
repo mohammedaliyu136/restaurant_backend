@@ -1,0 +1,38 @@
+{% if user.is_authenticated %}
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/complain/">Brand Name</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/complain/">Home</a></li>
+        <li><a href="#Complain" data-toggle="modal" data-target="#complain">Complain</a></li>
+        <li><a href="#Check" data-toggle="modal" data-target="#check">Check Complain Status</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>
+          {{user.username}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/loginout/">Logout</a>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </nav>
+{% else %}
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/complain/">Brand Name</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/complain/">Home</a></li>
+        <li><a href="#Complain" data-toggle="modal" data-target="#complain">Complain</a></li>
+        <li><a href="#Check" data-toggle="modal" data-target="#check">Check Complain Status</a></li>
+      </ul>
+    </div>
+  </nav>
+{% endif %}
+{% include 'partials/modal.html' %}

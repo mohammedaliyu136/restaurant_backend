@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<!-- list body start -->
+<div class="container main">            
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th style="background-color: grey; color: white"><h3><center>Complains</center></h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include 'partials/table_li_.html' %}
+    </tbody>
+  </table>
+  {% include 'partials/table_pagination.html' %}
+</div>
+<!-- list body end -->
+{% endblock %}

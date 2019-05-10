@@ -1,0 +1,21 @@
+{% extends './../base.html' %}
+
+{% block content %}
+
+	<!-- list body start -->
+<div class="container main">            
+    <h3>agency</h3>
+    <h4><b>Name:</b> {{gov.name}}</h4>
+    <h4><b>Department:</b> {{gov.department}}</h4>
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th style="background-color: grey; color: white"><h3><center>Complains</center></h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include './../partials/table_li_.html' %}
+    </tbody>
+</div>
+<!-- list body end -->
+{% endblock %}

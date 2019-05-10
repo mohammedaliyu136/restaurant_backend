@@ -1,0 +1,9 @@
+{% for complain in complains %}
+  <tr>
+    <td><a href="/complain/{{ complain.code }}">{{ complain.subject }}</a></td>
+  </tr>
+{% empty %}
+  <tr>
+    <td colspan="8" class="text-center bg-warning">No Complain</td>
+  </tr>
+{% endfor %}

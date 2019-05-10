@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body style="background: url('image/background.png');">
+	  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/mobile/index/" class="brand-logo">Send Report</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="index.html" data-target="nav-mobile" class=""><i class="material-icons">arrow_back</i></a>
+    </div>
+  </nav>
+  <div class="container">
+    <!-- Page Content goes here -->
+    <div class="row" style="margin-top: 50px">
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+      <div class="input-field col s12">
+        <input id="title" type="text" name="title" class="validate" style="color: white">
+        <label for="title">Title</label>
+      </div>
+
+      <div class="input-field col s12">
+        <textarea id="textarea1" name="description" class="materialize-textarea" style="color: white"></textarea>
+        <label for="textarea1">Report Detail</label>
+      </div>
+
+      <input type="file" name="document" accept="image/*" capture="camera" multiple>
+
+      <!--
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input type="file" accept="image/*" capture="camera" multiple>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Upload one or more files">
+        </div>
+      </div>-->
+
+      
+
+      <div class="input-field col s12">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+      </div>
+
+    </form>
+
+    {{ form.as_p }}
+
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
