@@ -44,9 +44,4 @@ def order(request):
 
 def order_list(request):
     orders = Order.objects.all()
-    print orders
-    for order in orders:
-        print order.customer.name, order.customer.address, order.customer.phone_number, order.meal.all()
-        
-
     return render(request, 'order_list_index.html', {'orders':orders})
