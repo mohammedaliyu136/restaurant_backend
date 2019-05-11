@@ -31,11 +31,11 @@
 						<table>
 							<thead>
 								<tr class="row100 head">
-									<th class="cell100 column1" style="width: 20%">Customer Name</th>
-									<th class="cell100 column2" style="width: 25%">Address</th>
-									<th class="cell100 column3" style="width: 10%">Phone</th>
+									<th class="cell100 column2" style="width: 20%">Customer Name</th>
+									<th class="cell100 column1" style="width: 25%">Address</th>
+									<th class="cell100 column4" style="width: 10%">Phone</th>
 									<th class="cell100 column4" style="width: 15%">Order</th>
-									<th class="cell100 column4" style="width: 25%">Additional Message</th>
+									<th class="cell100 column3" style="width: 25%">Additional Message</th>
 								</tr>
 							</thead>
 						</table>
@@ -53,10 +53,10 @@
 								</tr>-->
 								{% for order in orders %}
 								<tr class="row100 body">
-									<td class="cell100 column1">{{order.customer.name}}</td>
-									<td class="cell100 column2">{{order.customer.address}}</td>
-									<td class="cell100 column3">{{order.customer.phone_number}}</td>
-									<td class="cell100 column4">
+									<td class="cell100 column2">{{order.customer.name}}</td>
+									<td class="cell100 column1">{{order.customer.address}}</td>
+									<td class="cell100 column4">{{order.customer.phone_number}}</td>
+									<td class="cell100 column3">
 										<ul>
 										{% for meal in order.meal.all %}
 											<li>{{meal.name}} #{{meal.price}}</li>
