@@ -39,14 +39,16 @@ class Order(models.Model):
     restaurant  = models.ForeignKey('Restaurant')
     customer  = models.ForeignKey('Customer')
     status  = models.CharField(max_length = 300)
+    additional_message = models.CharField(max_length = 100)
     
     def __str__(self):
         return str(self.customer.name)+' - '+str(self.meal.all()[0])
 
 
 class Customer(models.Model):
-    name      = models.CharField(max_length = 150)
-    address = models.CharField(max_length = 150)
+    name               = models.CharField(max_length = 150)
+    address            = models.CharField(max_length = 150)
+    phone_number       = models.CharField(max_length = 20)
     
     def __str__(self):
         return self.name
