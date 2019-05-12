@@ -7,7 +7,8 @@ from django.db import models
 
 class Meal(models.Model):
     name      = models.CharField(max_length = 150)
-    img       = models.ImageField('/img')
+    #img       = models.ImageField('/img')
+    img_url   = models.URLField(max_length=300, null=True)
     category  = models.ForeignKey('Catergory')
     price     = models.FloatField()
     discount  = models.IntegerField()

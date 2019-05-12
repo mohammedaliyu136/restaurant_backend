@@ -7,7 +7,7 @@ class MealSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Meal
-        fields = ['id', 'name', 'img', 'category', 'price', 'discount',]
+        fields = ['id', 'name', 'img_url', 'category', 'price', 'discount',]
 
 
    
