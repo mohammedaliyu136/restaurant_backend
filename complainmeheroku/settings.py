@@ -25,8 +25,9 @@ SECRET_KEY = "c1!elf!wbu0ib41c)na=t-wv-k(()l7=dn*#@wg8pq&n94g6wo"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+ALLOWED_HOSTS = ['*']
 # Application definition
+CORS_ORIGIN_ALLOW_ALL=True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,9 +40,7 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'complain',
-    'mobile_complain',
-    'restaurant',
+    'api',
 
     'corsheaders',
 ]
